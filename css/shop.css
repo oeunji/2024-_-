@@ -1,0 +1,72 @@
+h3 {
+    text-align: center;
+    font-size: 38px;
+    margin-top: 80px;
+    color: black;
+}
+
+.category-nav {
+    text-align: center;
+    margin-right: 3px;
+    margin-top: 20px;
+}
+
+.category-nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.category-nav li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.category-nav a {
+    text-decoration: none;
+    font-size: 15px;
+    color: #acacac;
+    font-family: 'Arial, sans-serif'; /* Change this to any font you like */
+    transition: color 0.3s;
+}
+
+.category-nav a:hover {
+    color: #555; /* Optional: add a hover effect */
+}
+
+.item {
+    display: inline-block;
+    width: 195px;
+    margin: 20px;
+    text-align: center;
+    transform: translateX(35px); /* Move items 10px to the left */
+}
+
+.item img {
+    width: 100%;
+    height: auto;
+}
+
+.item h4 {
+    margin: 10px 0;
+}
+
+.item-detail {
+    text-align: center;
+}
+
+.item-detail img {
+    width: 300px;
+    height: auto;
+    margin: 20px 0;
+}
+
+.action-buttons {
+    margin-top: 20px;
+}
+
+.action-buttons button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}

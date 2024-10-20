@@ -1,0 +1,468 @@
+* {
+    box-sizing: border-box; /* 모든 요소의 박스 사이징을 테두리 포함으로 설정 */
+    margin: 0; /* 기본 여백 제거 */
+    padding: 0; /* 기본 패딩 제거 */
+    font-family: Century Gothic; /* 기본 폰트를 Century Gothic으로 설정 */
+}
+
+.title {
+    position: absolute; /* 절대 위치 지정 */
+    top: 50%; /* 화면의 세로 중앙에 배치하기 위해 상단 위치를 50%로 설정 */
+    left: 50%; /* 화면의 가로 중앙에 배치하기 위해 왼쪽 위치를 50%로 설정 */
+    transform: translate(-50%, -50%); /* 부모 요소의 가로 너비와 세로 높이에 따라 가운데 정렬 */
+    text-align: center; /* 텍스트를 가운데 정렬 */
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    font-family: Verdana, sans-serif; /* 폰트를 Verdana와 sans-serif로 설정 */
+    margin: 0; /* 기본 여백 제거 */
+    width: 100%;
+}
+
+header {
+    height: -10vh; /* 헤더 높이를 -10vh로 설정 (이 설정은 비정상적임) */
+    background-size: 100% 100%; /* 배경 크기를 100%로 설정 */
+    background-position: center; /* 배경 위치를 가운데로 설정 */
+    background-attachment: fixed; /* 배경을 고정시킴 */
+}
+
+.main {
+    overflow: hidden; /* 넘치는 내용을 숨김 */
+    position: fixed; /* 고정 위치 설정 */
+    background-color: black; /* 배경 색상을 검정으로 설정 */
+    top: 0; /* 상단에 위치 */
+    width: 100%; /* 너비를 100vw로 설정 */
+    height: 8vh; /* 높이를 8vh로 설정 */
+    max-width: 1550px; /* 최대 너비를 1550px로 설정 */
+}
+
+ul {
+    list-style-type: none; /* 리스트 스타일 타입을 없앰 */
+    margin-top: 20px; /* 상단 여백을 20px로 설정 */
+    margin-right: 50px; /* 오른쪽 여백을 50px로 설정 */
+}
+
+ul li {
+    display: inline; /* 요소를 인라인으로 설정 */
+}
+
+.list {
+    position: fixed; /* 고정 위치 설정 */
+    display: block; /* 블록 요소로 설정 */
+    top: 10px; /* 상단에서 10px 떨어진 위치로 설정 */
+    float: left; /* 왼쪽으로 떠 있게 설정 */
+}
+
+.list li.logo img {
+    position: relative; /* 상대 위치 설정 */
+    float: left; /* 왼쪽으로 떠 있게 설정 */
+    top: -20.75px; /* 상단에서 20px 떨어진 위치로 설정 */
+    margin-left: 5%; /* 왼쪽 여백을 5%로 설정 */
+    margin-right: 35px; /* 오른쪽 여백을 35px로 설정 */
+}
+
+.list input[type='image'] {
+    position: relative; /* 상대 위치 설정 */
+    float: right; /* 오른쪽으로 떠 있게 설정 */
+    top: -88px; /* 상단에서 88px 떨어진 위치로 설정 */
+    left: 10%; /* 왼쪽에서 10% 떨어진 위치로 설정 */
+    margin-left: 20%; /* 왼쪽 여백을 20%로 설정 */
+    padding: 4px; /* 패딩을 4px로 설정 */
+    border-radius: 10px; /* 테두리를 둥글게 설정 */
+    border: 1px solid black; /* 검정색 테두리 설정 */
+    transition: 0.6s ease; /* 부드러운 전환 효과 설정 */
+    background-color: #fff; /* 배경 색상을 흰색으로 설정 */
+}
+
+.list input[type='image']:hover {
+    background-color: black; /* 마우스를 올렸을 때 배경 색상을 검정으로 설정 */
+}
+
+.list2 {
+    position: relative;
+    top: -10px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.list2 li a {
+    text-decoration: none; /* 텍스트 장식을 없앰 */
+    color: #fff; /* 글자 색상을 흰색으로 설정 */
+    padding: 5px 20px; /* 패딩을 5px 20px로 설정 */
+    margin: 0 5px; /* 좌우 여백을 15px로 설정 */
+    border: 1px solid transparent; /* 투명한 테두리 설정 */
+    transition: 0.9s ease; /* 부드러운 전환 효과 설정 */
+    text-align: center; /* 텍스트를 가운데 정렬 */
+    display: block; /* 블록 요소로 설정 */
+}
+
+.list2 li a:hover {
+    background-color: #fff; /* 마우스를 올렸을 때 배경 색상을 흰색으로 설정 */
+    color: #000; /* 글자 색상을 검정으로 설정 */
+}
+
+.list2 li.active-menu a {
+    background-color: #fff; /* 활성화된 메뉴의 배경 색상을 흰색으로 설정 */
+    color: #000; /* 활성화된 메뉴의 글자 색상을 검정으로 설정 */
+}
+
+.title h1 {
+    color: #fff; /* 글자 색상을 흰색으로 설정 */
+    font-size: 45px; /* 글자 크기를 45px로 설정 */
+    font-style: Rage Italic; /* 글자 스타일을 Rage Italic으로 설정 (비표준 폰트일 가능성 있음) */
+}
+
+.button {
+    position: absolute; /* 절대 위치 설정 */
+    top: 44%; /* 상단에서 44% 떨어진 위치로 설정 */
+    left: 50%; /* 왼쪽에서 50% 떨어진 위치로 설정 */
+    transform: translate(-50%, -50%); /* 부모 요소의 가로 너비와 세로 높이에 따라 가운데 정렬 */
+}
+
+.btn {
+    border: 1px solid #fff; /* 흰색 테두리 설정 */
+    padding: 10px 30px; /* 패딩을 10px 30px로 설정 */
+    color: #fff; /* 글자 색상을 흰색으로 설정 */
+    text-decoration: none; /* 텍스트 장식을 없앰 */
+    transition: 0.6s ease; /* 부드러운 전환 효과 설정 */
+}
+
+.btn:hover {
+    background-color: #fff; /* 마우스를 올렸을 때 배경 색상을 흰색으로 설정 */
+    color: #000; /* 글자 색상을 검정으로 설정 */
+}
+
+.mySlides {
+    display: none; /* 요소를 숨김 */
+}
+
+.slideshow-container img {
+    vertical-align: middle; /* 이미지의 수직 정렬을 가운데로 설정 */
+    top: -10px; /* 상단에서 10px 떨어진 위치로 설정 */
+    height: 100vh; /* 높이를 100vh로 설정 */
+    background-size: 100% 100%; /* 배경 크기를 100%로 설정 */
+}
+
+/* 슬라이드쇼 컨테이너 */
+.slideshow-container {
+    top: -80px; /* 상단에서 80px 떨어진 위치로 설정 */
+    max-width: 100%; /* 최대 너비를 100%로 설정 */
+    max-height: 100%; /* 최대 높이를 100%로 설정 */
+    position: relative; /* 상대 위치 설정 */
+    margin: auto; /* 가운데 정렬 */
+}
+
+/* 이전 & 다음 버튼 */
+.prev,
+.next {
+    cursor: pointer; /* 커서를 포인터로 변경 */
+    position: absolute; /* 절대 위치 설정 */
+    top: 50%; /* 상단에서 50% 떨어진 위치로 설정 */
+    width: auto; /* 너비를 자동으로 설정 */
+    padding: 16px; /* 패딩을 16px로 설정 */
+    margin-top: -22px; /* 상단 마진을 -22px로 설정 */
+    color: white; /* 글자 색상을 흰색으로 설정 */
+    font-weight: bold; /* 글자 굵기를 볼드로 설정 */
+    font-size: 18px; /* 글자 크기를 18px로 설정 */
+    transition: 0.6s ease; /* 부드러운 전환 효과 설정 */
+    border-radius: 0 3px 3px 0; /* 테두리를 둥글게 설정 */
+    user-select: none; /* 사용자가 선택할 수 없도록 설정 */
+    background-color: rgba(0, 0, 0, 0.3); /* 반투명한 검정색 배경 설정 */
+}
+
+/* "다음 버튼"을 오른쪽에 위치 */
+.next {
+    right: 0; /* 오른쪽에 위치 */
+    border-radius: 3px 0 0 3px; /* 테두리를 둥글게 설정 */
+}
+
+/* 마우스를 올렸을 때 배경 색상 변경 */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.6); /* 반투명한 검정색 배경 설정 */
+}
+
+/* 도트/불릿/인디케이터 */
+.dot {
+    position: relative; /* 상대 위치 설정 */
+    cursor: pointer; /* 커서를 포인터로 변경 */
+    top: -130px; /* 상단에서 130px 떨어진 위치로 설정 */
+    height: 15px; /* 높이를 15px로 설정 */
+    width: 15px; /* 너비를 15px로 설정 */
+    margin: 0 2px; /* 좌우 마진을 2px로 설정 */
+    background-color: #bbb; /* 배경 색상을 회색으로 설정 */
+    border-radius: 50%; /* 테두리를 둥글게 설정 */
+    display: inline-block; /* 인라인 블록 요소로 설정 */
+    transition: background-color 0.6s ease; /* 배경 색상 전환 효과 설정 */
+}
+
+.active,
+.dot:hover {
+    background-color: #717171; /* 마우스를 올렸을 때 배경 색상을 어두운 회색으로 설정 */
+}
+
+/* 페이드 애니메이션 */
+.fade {
+    -webkit-animation-name: fade; /* 웹킷 페이드 애니메이션 설정 */
+    -webkit-animation-duration: 1.5s; /* 애니메이션 지속 시간을 1.5초로 설정 */
+    animation-name: fade; /* 페이드 애니메이션 설정 */
+    animation-duration: 1.5s; /* 애니메이션 지속 시간을 1.5초로 설정 */
+}
+
+.contain {
+    background: white; /* 배경 색상을 흰색으로 설정 */
+    background: linear-gradient(305deg, white); /* 흰색 그라데이션 배경 설정 */
+    width: 98.9vw; /* 너비를 98.9vw로 설정 */
+    height: 70vh; /* 높이를 70vh로 설정 */
+    margin: -138px 0px; /* 상단 마진을 -138px로 설정 */
+}
+
+.contain .heading h2 {
+    text-align: center; /* 텍스트를 가운데 정렬 */
+    position: relative; /* 상대 위치 설정 */
+    padding-bottom: 10px; /* 하단 패딩을 10px로 설정 */
+    border-bottom: 2px solid #000; /* 하단 테두리를 검정색 2px로 설정 */
+    top: 17px; /* 상단에서 17px 떨어진 위치로 설정 */
+}
+
+.contain .box {
+    overflow: hidden; /* 넘치는 내용을 숨김 */
+    width: 320px; /* 너비를 320px로 설정 */
+    height: 270px; /* 높이를 270px로 설정 */
+    margin: 28px; /* 모든 방향의 여백을 28px로 설정 */
+    box-sizing: border-box; /* 박스 사이징을 테두리 포함으로 설정 */
+    display: inline-block; /* 인라인 블록 요소로 설정 */
+    transition: transform 2s; /* 변환 애니메이션 설정 */
+}
+
+.contain .box .imgBox {
+    overflow: hidden; /* 넘치는 내용을 숨김 */
+    position: absolute;
+}
+
+.contain .box .imgBox img {
+    max-width: 100%; /* 최대 너비를 100%로 설정 */
+    height: 300px; /* 높이를 300px로 설정 */
+    transition: transform 2s; /* 변환 애니메이션 설정 */
+}
+
+.contain .box:hover .imgBox img {
+    overflow: hidden; /* 넘치는 내용을 숨김 */
+    transform: scale(1.2); /* 이미지 크기를 1.2배로 확대 */
+}
+
+/* View all item */
+.contain .destination-btn {
+    text-align: center; /* 부모 요소에 텍스트 정렬을 왼쪽으로 설정 */
+    margin-right: 0px; /* 왼쪽 여백을 추가하여 버튼을 왼쪽으로 이동 */
+}
+
+.contain .destination-btn a {
+    position: relative; /* 상대 위치 설정 */
+    text-decoration: none; /* 텍스트 장식을 없앰 */
+    border: 1px solid #fff; /* 흰색 테두리 설정 */
+    border-radius: 10px; /* 테두리를 둥글게 설정 */
+    padding: 5px 9px; /* 패딩을 5px 9px로 설정 */
+    color: black; /* 글자 색상을 검정으로 설정 */
+    top: -19px; /* 상단에서 19px 떨어진 위치로 설정 */
+    transition: 0.6s ease; /* 부드러운 전환 효과 설정 */
+    display: inline-block; /* 인라인 블록 요소로 설정 */
+}
+
+.contain a:hover {
+    background-color: #fff; /* 마우스를 올렸을 때 배경 색상을 흰색으로 설정 */
+    color: #000; /* 글자 색상을 검정으로 설정 */
+}
+
+.about {
+    position: relative; /* 상대 위치 설정 */
+    background-color: black; /* 배경 색상을 검정으로 설정 */
+    top: 118px; /* 상단에서 118px 떨어진 위치로 설정 */
+    width: 98.9vw; /* 너비를 98.9vw로 설정 */
+    height: 15vh; /* 높이를 15vh로 설정 */
+}
+
+.about h2 {
+    position: relative; /* 상대 위치 설정 */
+    text-align: center; /* 텍스트를 가운데 정렬 */
+    color: white; /* 글자 색상을 흰색으로 설정 */
+    top: 0px; /* 상단 위치를 0px로 설정 */
+    padding: 2px; /* 패딩을 2px로 설정 */
+    border: 3px solid black; /* 검정색 테두리 설정 */
+}
+
+.contain .box .name-text {
+    position: absolute; /* 절대 위치 설정 */
+    top: 870px; /* 상단에서 870px 떨어진 위치로 설정 */
+    color: white; /* 글자 색상을 흰색으로 설정 */
+    font-family: Helvetica; /* 폰트를 Helvetica로 설정 */
+}
+
+.contain .box .name-text h2 {
+    margin-top: 50px; /* 상단 마진을 50px로 설정 */
+    text-align: center; /* 텍스트를 가운데 정렬 */
+    transition: 0.6s ease; /* 부드러운 전환 효과 설정 */
+}
+
+.contain .box .name-text a {
+    position: relative; /* 상대 위치 설정 */
+    display: none; /* 요소를 숨김 */
+    border: 1px solid #fff; /* 흰색 테두리 설정 */
+    padding: 5px 9px; /* 패딩을 5px 9px로 설정 */
+    top: -5px; /* 상단에서 5px 떨어진 위치로 설정 */
+    color: #fff; /* 글자 색상을 흰색으로 설정 */
+    text-decoration: none; /* 텍스트 장식을 없앰 */
+    transition: 0.6s ease; /* 부드러운 전환 효과 설정 */
+    text-align: center; /* 텍스트를 가운데 정렬 */
+}
+
+.contain .box:hover .name-text h2 {
+    margin-top: 5px; /* 상단 마진을 5px로 설정 */
+}
+
+.contain .box:hover .name-text a {
+    top: 15px; /* 상단에서 15px 떨어진 위치로 설정 */
+    display: block; /* 요소를 블록으로 표시 */
+}
+
+.contain .box .name-text a:hover {
+    background-color: #fff; /* 마우스를 올렸을 때 배경 색상을 흰색으로 설정 */
+    color: #000; /* 글자 색상을 검정으로 설정 */
+}
+
+.contain .box .left1 {
+    left: calc(50% - 300px); /* 중앙에서 380px 왼쪽으로 이동 (이미지 너비 + 간격) */
+    transform: translateX(-50%); /* 중앙 정렬 유지 */
+}
+
+.contain .box .left2 {
+    left: 50%; /* 화면의 왼쪽에서 50% 위치로 설정 */
+    transform: translateX(-50%); /* 요소의 가로 너비의 절반만큼 왼쪽으로 이동하여 중앙에 배치 */
+}
+
+.contain .box .left3 {
+    left: calc(50% + 300px); /* 중앙에서 380px 오른쪽으로 이동 (이미지 너비 + 간격) */
+    transform: translateX(-50%); /* 중앙 정렬 유지 */
+}
+
+footer {
+    text-decoration: none; /* 텍스트 장식을 없앰 */
+    font-family: Helvetica; /* 폰트를 Helvetica로 설정 */
+    text-align: center; /* 텍스트를 가운데 정렬 */
+    color: #fff; /* 글자 색상을 흰색으로 설정 */
+    font-size: 12px; /* 글자 크기를 12px로 설정 */
+}
+
+/* 화면 너비가 1535px 이하일 때의 미디어 쿼리 */
+@media screen and (max-width: 1535px) {
+    ul {
+        margin-top: 20px; /* 상단 여백을 20px로 설정 */
+        margin-right: 50px; /* 오른쪽 여백을 50px로 설정 */
+    }
+}
+
+/* 화면 너비가 1300px 이하일 때의 미디어 쿼리 */
+@media screen and (max-width: 1300px) {
+    ul {
+        margin-top: 20px; /* 상단 여백을 20px로 설정 */
+        margin-right: 50px; /* 오른쪽 여백을 50px로 설정 */
+    }
+    .title h1 {
+        font-size: 35px; /* 글자 크기를 35px로 설정 */
+    }
+    .btn {
+        padding: 8px 25px; /* 패딩을 8px 25px로 설정 */
+    }
+    .search input[type='text'] {
+        font-size: 10; /* 글자 크기를 10으로 설정 */
+        margin-right: 40%; /* 오른쪽 여백을 40%로 설정 */
+    }
+    .list input[type='image'] {
+        top: -88px; /* 상단에서 88px 떨어진 위치로 설정 */
+        margin-left: 4px; /* 왼쪽 여백을 4px로 설정 */
+        padding: 4px; /* 패딩을 4px로 설정 */
+    }
+}
+
+/* 화면 너비가 1200px 이하일 때의 미디어 쿼리 */
+@media screen and (max-width: 1200px) {
+    ul {
+        margin-top: 15px; /* 상단 여백을 15px로 설정 */
+        margin-right: 10px; /* 오른쪽 여백을 10px로 설정 */
+    }
+
+    ul li {
+        float: none; /* 떠 있는 상태를 없앰 */
+        display: block; /* 블록 요소로 설정 */
+        text-align: left; /* 텍스트를 왼쪽 정렬 */
+        width: 100%; /* 너비를 100%로 설정 */
+        padding: 14px; /* 패딩을 14px로 설정 */
+        margin-right: 30px; /* 오른쪽 여백을 30px로 설정 */
+    }
+    .list2 {
+        overflow: hidden; /* 넘치는 내용을 숨김 */
+        position: fixed; /* 고정 위치 설정 */
+        top: -10px; /* 상단에서 10px 떨어진 위치로 설정 */
+        left: 85%; /* 왼쪽에서 85% 떨어진 위치로 설정 */
+        float: right; /* 오른쪽으로 떠 있게 설정 */
+    }
+
+    .title h1 {
+        font-size: 30px; /* 글자 크기를 30px로 설정 */
+    }
+    .btn {
+        padding: 7px 20px; /* 패딩을 7px 20px로 설정 */
+    }
+    .list {
+        top: -15px; /* 상단에서 15px 떨어진 위치로 설정 */
+    }
+    .list li.logo img {
+        margin-left: 8%; /* 왼쪽 여백을 8%로 설정 */
+        margin-top: 15px; /* 상단 여백을 15px로 설정 */
+    }
+    .search input[type='text'] {
+        font-size: 10; /* 글자 크기를 10으로 설정 */
+        margin-right: 50px; /* 오른쪽 여백을 50px로 설정 */
+    }
+    .list input[type='image'] {
+        top: -55px; /* 상단에서 55px 떨어진 위치로 설정 */
+        margin-left: 10px; /* 왼쪽 여백을 10px로 설정 */
+        padding: 4px; /* 패딩을 4px로 설정 */
+    }
+    #long {
+        padding-left: 5px; /* 왼쪽 패딩을 5px로 설정 */
+    }
+}
+
+/* 화면 너비가 300px 이하일 때의 미디어 쿼리 */
+@media only screen and (max-width: 300px) {
+    .prev,
+    .next {
+        font-size: 11px; /* 글자 크기를 11px로 설정 */
+    }
+}
+
+/* 웹킷 페이드 애니메이션 키프레임 설정 */
+@-webkit-keyframes fade {
+    from {
+        opacity: 0.4; /* 시작 시 불투명도 설정 */
+    }
+    to {
+        opacity: 1; /* 끝날 때 불투명도 설정 */
+    }
+}
+
+/* 기본 페이드 애니메이션 키프레임 설정 */
+@keyframes fade {
+    from {
+        opacity: 0.4; /* 시작 시 불투명도 설정 */
+    }
+    to {
+        opacity: 1; /* 끝날 때 불투명도 설정 */
+    }
+}

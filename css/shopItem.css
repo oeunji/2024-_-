@@ -1,0 +1,43 @@
+h3 {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 80px;
+    color: black;
+}
+
+.item-detail {
+    text-align: center;
+}
+
+.item-detail img {
+    width: 260px;
+    height: auto;
+    margin: 20px 0;
+}
+
+.action-buttons {
+    margin-top: 18px;
+}
+
+.action-buttons button {
+    margin: 10px;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: white; /* Change to your preferred color */
+    color: black;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.action-buttons button:hover {
+    background-color: black; /* Darker shade of the button color */
+    color: white;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.action-buttons button:active {
+    background-color: white; /* Even darker shade for active state */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
